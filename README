@@ -1,0 +1,26 @@
+The code presented here is from NVIDIA's internal dev-kernel-3.10 Linux
+kernel branch @ commit 85e66d9e32f18056d55cd1781c9c76d80c0bc069.
+
+.../kernel/drivers/gpu/nvgpu/*.[ch]
+.../kernel/include/uapi/linux/nvgpu.h
+.../kernel/scripts/nvgpu_ucode
+.../kernel/include/linux/gk20a.h
+.../kernel/include/trace/events/gk20a.h
+.../kernel/drivers/gpu/nvgpu/gk20a/
+
+The dev-kernel branch within NVIDIA is used for Android and Linux for Tegra
+(L4T) product distributions.  Examples of these:
+    . Android: https://android.googlesource.com/kernel/tegra/
+    . L4T: https://developer.nvidia.com/linux-tegra
+
+The code presented will be morphed into a form which can be made directly
+useful to Nouveau.  That effort includes:
+
+   . Normalizing headers with regard to NVIDIA GPU concepts/engines already
+present within Nouveau.
+   . Eliminating superfluous code within 'nvgpu.'
+   . Bolstering Nouveau code with nvgpu functionality.
+   . Adapting to Nouveau run-time behaviour/formulation.
+
+Ken Adams
+kadams@nvidia.com
